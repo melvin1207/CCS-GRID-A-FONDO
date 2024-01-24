@@ -13,3 +13,116 @@
 body{
     font-family: 'League Spartan', sans-serif;
 }
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.main{
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: repeat(5, max-content) / 1fr;
+    grid-template-areas: 
+    "main"
+    "shop"
+    "image1"
+    "about"
+    "image2"
+    ;
+}
+
+.main_hero{
+    min-height: 500px;
+    background-image: url('../images/desktop-image-hero-1.jpg');
+    background-size: cover;
+    background-position: center;
+    grid-area: main;
+}
+
+.main_nav{
+    display: flex;
+    align-items: center;
+}
+
+.main_links{
+    display: none;
+}
+
+.main_logo{
+    margin: 0 auto;
+}
+
+.main_controls{
+    grid-area: main;
+    place-self: end;
+    background-color: var(--black);
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main_arrows{
+    height: 40%;
+}
+
+
+.main_shop{
+    grid-area: shop;
+}
+
+.main_content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_title{
+    color: var(--black);
+    font-size: 2rem;
+}
+
+.main_paragraph{
+    line-height: 1.5;
+    margin: 1em 0 2em;
+    color: var(--dark-gray);
+}
+
+.main_paragraph-about{
+    margin: 1em 0 0 0;
+}
+
+.main_cta{
+    text-decoration: none;
+    color: var(--very-dark-gray);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.main_arrow{
+    margin-left: 20px;
+}
+
+.main_bg{
+    grid-area: image1;
+    min-height: 250px;
+    height: 100%;
+    background-image: url('../images/image-about-dark.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.main_about{
+    grid-area: about;
+}
+
+.main_bg-second{
+    grid-area: image2;
+    background-image: url('../images/image-about-light.jpg');
+}
